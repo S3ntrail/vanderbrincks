@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
+a {
+  color: #f3f4f6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d79846;
+}
+
+p {
+  color: #f3f4f6;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f3f4f6;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1rem;
+  font: bold;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font: bold;
+}
+
+h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font: bold;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font: bold;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font: bold;
+}
+
+h6 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font: bold;
+}
+
+label {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
