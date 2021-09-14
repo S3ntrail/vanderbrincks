@@ -1,6 +1,8 @@
 import Header from '../components/Global/Head/head'
 import Navbar from '../components/Global/Navbar/navbar'
 
+import Landing from 'components/Landing/Landing'
+
 export default function Home() {
   return (
 
@@ -11,6 +13,10 @@ export default function Home() {
         <div>
           <Navbar />
         </div>
+
+        <section>
+          <Landing />
+        </section>
       </main>
 
     </div>

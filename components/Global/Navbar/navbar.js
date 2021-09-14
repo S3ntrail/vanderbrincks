@@ -14,25 +14,25 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div class="w-full md:w-auto md:flex-grow md:flex md:items-center">
+        <div className="w-full md:w-auto md:flex-grow md:flex md:items-center">
 
           <ul className="flex flex-col mt-4 -mx-4 pt-4 md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0">
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Onderhoud</a>
+                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Onderhoud</a>
               </Link>
             </li>
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Over ons</a>
+                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Over ons</a>
               </Link>
             </li>
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 md:p-2 lg:px-4" href="#" title="Link">Service</a>
+                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Service</a>
               </Link>
             </li>
 
