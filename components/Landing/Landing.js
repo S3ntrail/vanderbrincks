@@ -4,7 +4,7 @@ import Button from 'components/Button/button'
 
 const Landing = () => {
   return(
-    <div className="mt-10 flex gap-2 justify-center pb-4 flex-wrap">
+    <div className="mt-40 flex gap-2 justify-center pb-4 flex-wrap">
       <div className="w-1/2 text-left">
         <Image 
           src="/bikeride.svg"

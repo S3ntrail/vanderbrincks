@@ -2,6 +2,7 @@ import Header from '../components/Global/Head/head'
 import Navbar from '../components/Global/Navbar/navbar'
 
 import Landing from 'components/Landing/Landing'
+import Maintenance from 'components/Maintenance/Maintenance'
 
 export default function Home() {
   return (
@@ -16,6 +17,10 @@ export default function Home() {
 
         <section>
           <Landing />
+        </section>
+
+        <section>
+          <Maintenance />
         </section>
       </main>
 

@@ -5,8 +5,8 @@ import Button from '/components/Button/button'
 const Navbar = () => {
   return (
 
-    <nav className="bg-white shadow" role="navigation">
-      <div className="container mx-auto mt-4 p-4 flex flex-wrap items-center justify-center">
+    <nav className="bg-white shadow fixed w-screen z-10" role="navigation">
+      <div className="container mx-auto mt-4 p-4 mb-4 flex flex-wrap items-center justify-center">
         
         <div className="mr-4 md:mr-8">
           <a href="#">
