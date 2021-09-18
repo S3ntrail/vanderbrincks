@@ -15,13 +15,13 @@ const Landing = () => {
       </div>
 
       <div className="mt-24 w-1/4">
-        <h2 className="font-semibold text-left">van der Binckes</h2>
+        <h2 className="font-semibold text-left">Van der Binckes</h2>
 
         <h3 className="mt-4 text-left">
           Op maat gemaakte fietsen met wat stukjes qualiteit en innovatie
         </h3>
 
-        <div className="mt-6 w-2/4">
+        <div className="text-left mt-6 w-2/4">
           <Button
             title="Start je avontuur"
           />

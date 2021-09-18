@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
 
     <nav className="bg-white shadow fixed w-screen z-10" role="navigation">
-      <div className="container mx-auto mt-4 p-4 mb-4 flex flex-wrap items-center justify-center">
+      <div className="container mx-auto mt-2 p-4 mb-2 flex flex-wrap items-center justify-center">
         
         <div className="mr-4 md:mr-8">
           <a href="#">
@@ -20,19 +20,19 @@ const Navbar = () => {
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Onderhoud</a>
+                <a className="block px-4 py-4 font-semibold transition duration-500 hover:bg-purple-600 hover:text-white" href="#" title="Link">Onderhoud</a>
               </Link>
             </li>
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Over ons</a>
+                <a className="block px-4 py-4 font-semibold transition duration-500 hover:bg-purple-600 hover:text-white" href="#" title="Link">Over ons</a>
               </Link>
             </li>
 
             <li>
               <Link href="#">
-                <a className="block px-4 py-1 font-semibold" href="#" title="Link">Service</a>
+                <a className="block px-4 py-4 font-semibold transition duration-500 hover:bg-purple-600 hover:text-white" href="#" title="Link">Service</a>
               </Link>
             </li>
 

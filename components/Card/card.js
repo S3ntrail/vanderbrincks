@@ -4,7 +4,7 @@ import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 const Card = () => {
   return(
-    <div className="flex flex-wrap border-2 shadow rounded-lg">
+    <div className="flex flex-wrap border-2 shadow rounded-lg cursor-pointer transform transition duration-500 hover:scale-110 hover:shadow-xl">
 
       <div className="text-left p-4 w-3/4">
         
