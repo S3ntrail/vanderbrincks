@@ -2,7 +2,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
-const Card = () => {
+const Card = props => {
   return(
     <div className="flex flex-wrap border-2 shadow rounded-lg cursor-pointer transform transition duration-500 hover:scale-110 hover:shadow-xl">
 
@@ -11,11 +11,11 @@ const Card = () => {
         <div>
 
           <h3 className="font-bold mb-4">
-            Onderhoud
+            {props.title}
           </h3>
 
           <p>
-            Lees hier over het onderhouden van je fiets
+            {props.description}
           </p>
         </div>
 

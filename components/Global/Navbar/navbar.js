@@ -5,7 +5,7 @@ import Button from '/components/Button/button'
 const Navbar = () => {
   return (
 
-    <nav className="bg-white shadow fixed w-screen z-10" role="navigation">
+    <nav className="bg-white shadow fixed w-screen z-10 animate__animated animate__fadeInDown" role="navigation">
       <div className="container mx-auto mt-2 p-4 mb-2 flex flex-wrap items-center justify-center">
         
         <div className="mr-4 md:mr-8">

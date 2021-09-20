@@ -5,7 +5,7 @@ import Button from 'components/Button/button'
 const Landing = () => {
   return(
     <div className="mt-40 flex gap-2 justify-center pb-4 flex-wrap">
-      <div className="w-1/2 text-left">
+      <div className="w-1/2 text-left animate__animated animate__fadeInLeft">
         <Image 
           src="/bikeride.svg"
           layout="fixed"
@@ -14,7 +14,7 @@ const Landing = () => {
         />
       </div>
 
-      <div className="mt-24 w-1/4">
+      <div className="mt-24 w-1/4 animate__animated animate__fadeInRight">
         <h2 className="font-semibold text-left">Van der Binckes</h2>
 
         <h3 className="mt-4 text-left">

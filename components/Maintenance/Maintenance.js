@@ -15,11 +15,17 @@ const Maintenance = () => {
         </h3>
 
         <div className="mt-6">
-          <Card />
+          <Card 
+            title="Onderhoud"
+            description="Lees hier over het onderhouden van je fiets"
+          />
         </div>
 
         <div className="mt-6">
-          <Card />
+          <Card 
+            title="Veiligheid"
+            description="Lees hier over het veiligheid over jou en het verkeerd"
+          />
         </div>
 
       </div>
