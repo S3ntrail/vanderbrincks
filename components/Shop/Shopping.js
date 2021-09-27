@@ -10,10 +10,10 @@ const Shop = () => {
       </div>
 
       <div className="mt-24 w-1/4 animate__animated animate__fadeInRight">
-        <h2 className="font-semibold text-left">UWU</h2>
+        <h2 className="font-semibold text-left">Shopping pagina</h2>
 
         <h3 className="mt-4 text-left">
-          Op maat gemaakte fietsen met wat stukjes qualiteit en innovatie
+          
         </h3>
 
       </div>
