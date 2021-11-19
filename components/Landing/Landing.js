@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Button from 'components/Button/button'
 
@@ -22,9 +23,13 @@ const Landing = () => {
         </h3>
 
         <div className="text-left mt-6 w-2/4">
-          <Button
-            title="Start je avontuur"
-          />
+          <Link href="/shop">
+            <a title="Shop"> 
+              <Button 
+                title="Start je avontuur"
+              />
+            </a>
+          </Link>
         </div>
 
       </div>

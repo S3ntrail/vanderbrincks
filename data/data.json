@@ -1,0 +1,37 @@
+[
+  {
+    "id":1,
+    "name": "Snelle jelle",
+    "price": "3500",
+    "durability": "6",
+    "brand": "Gazelle"
+  },
+  {
+    "id":2,
+    "name": "Snelle jelle",
+    "price": "3500",
+    "durability": "6",
+    "brand": "Gazelle"
+  },
+  {
+    "id":3,
+    "name": "Snelle jelle",
+    "price": "3500",
+    "durability": "6",
+    "brand": "Gazelle"
+  },
+  {
+    "id":4,
+    "name": "Snelle jelle",
+    "price": "3500",
+    "durability": "6",
+    "brand": "Gazelle"
+  },
+  {
+    "id":5,
+    "name": "Snelle jelle",
+    "price": "3500",
+    "durability": "6",
+    "brand": "Gazelle"
+  }
+]
