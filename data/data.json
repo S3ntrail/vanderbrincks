@@ -2,36 +2,46 @@
   {
     "id":1,
     "name": "Snelle jelle",
-    "price": "3500",
+    "price": "3499,99",
+    "rating": "3",
     "durability": "6",
+    "description":"Nam at risus semper enim lacinia congue. Aliquam pellentesque libero ut tellus bibendum consequat. Phasellus volutpat pellentesque mollis. Morbi tellus velit, dapibus blandit vehicula eget, dapibus et neque. Praesent tellus ex, feugiat in lorem quis, placerat faucibus nibh. Ut pellentesque sem tincidunt libero iaculis malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "brand": "Gazelle"
   },
   {
     "id":2,
     "name": "Snelle jelle",
-    "price": "3500",
+    "price": "3499,99",
+    "rating": "3",
     "durability": "6",
+    "description":"Nam at risus semper enim lacinia congue. Aliquam pellentesque libero ut tellus bibendum consequat. Phasellus volutpat pellentesque mollis. Morbi tellus velit, dapibus blandit vehicula eget, dapibus et neque. Praesent tellus ex, feugiat in lorem quis, placerat faucibus nibh. Ut pellentesque sem tincidunt libero iaculis malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "brand": "Gazelle"
   },
   {
     "id":3,
     "name": "Snelle jelle",
-    "price": "3500",
+    "price": "3499,99",
+    "rating": "3",
     "durability": "6",
+    "description":"Nam at risus semper enim lacinia congue. Aliquam pellentesque libero ut tellus bibendum consequat. Phasellus volutpat pellentesque mollis. Morbi tellus velit, dapibus blandit vehicula eget, dapibus et neque. Praesent tellus ex, feugiat in lorem quis, placerat faucibus nibh. Ut pellentesque sem tincidunt libero iaculis malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "brand": "Gazelle"
   },
   {
     "id":4,
     "name": "Snelle jelle",
-    "price": "3500",
+    "price": "3499,99",
+    "rating": "3",
     "durability": "6",
+    "description":"Nam at risus semper enim lacinia congue. Aliquam pellentesque libero ut tellus bibendum consequat. Phasellus volutpat pellentesque mollis. Morbi tellus velit, dapibus blandit vehicula eget, dapibus et neque. Praesent tellus ex, feugiat in lorem quis, placerat faucibus nibh. Ut pellentesque sem tincidunt libero iaculis malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "brand": "Gazelle"
   },
   {
     "id":5,
     "name": "Snelle jelle",
-    "price": "3500",
+    "price": "3499,99",
+    "rating": "3",
     "durability": "6",
+    "description":"Nam at risus semper enim lacinia congue. Aliquam pellentesque libero ut tellus bibendum consequat. Phasellus volutpat pellentesque mollis. Morbi tellus velit, dapibus blandit vehicula eget, dapibus et neque. Praesent tellus ex, feugiat in lorem quis, placerat faucibus nibh. Ut pellentesque sem tincidunt libero iaculis malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
     "brand": "Gazelle"
   }
 ]
