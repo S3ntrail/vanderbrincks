@@ -1,18 +1,20 @@
 import data from 'data/data.json'
 import ShopButton from 'components/Button/shop/button'
+import Link from 'next/link'
 
 const ShoppingCard = () => {
 
-  const product = data.map((product, index) => {
+  const product = data.map((product) => {
     return(
-      <div key={index}>
-        <div className="border-2 border-gray-400 rounded-lg p-4 m-2">
+      <Link href={'/shop/' + product.id} key={product.id}>
+      <div  className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+        <div className="border-2 border-black rounded-lg p-4 m-2">
 
           <div className="justify-center items-center mx-auto">
             <img className="rounded-t-lg" src="/cargo-bike.jpg" width="200" height="200"></img>
           </div>
 
-          <div className="border-t-2 border-gray-400">
+          <div className="border-t-2 border-black">
             <div className="mt-2">
               <h4>{product.name}</h4>
             </div>
@@ -28,6 +30,7 @@ const ShoppingCard = () => {
 
         </div>
       </div>
+      </Link>
     )
   })
 
