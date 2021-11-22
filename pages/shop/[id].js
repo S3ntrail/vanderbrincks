@@ -31,7 +31,9 @@ const Details = ({ product }) => {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <Header />
+      <Header 
+        title={product.brand + " - " + product.name}
+      />
 
       <main className="flex flex-col justify-center w-full flex-1 text-center">
 

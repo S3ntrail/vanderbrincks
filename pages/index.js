@@ -8,7 +8,9 @@ import Card from 'components/Card/card'
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <Header />
+      <Header 
+        title="Home page"
+      />
 
       <main className="flex flex-col justify-center w-full flex-1 text-center">
         <section>
