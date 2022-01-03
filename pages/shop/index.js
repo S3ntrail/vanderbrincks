@@ -1,12 +1,10 @@
 import Header from "components/Global/Head/head";
 import ShoppingCard from "components/Card/shop/card";
 
-export default function Home() {
+export default function Home({ productList }) {
   return (
     <div className="flex flex-col items-center justify-center">
-      <Header 
-        title="Shopping page"
-      />
+      <Header title="Shopping page" />
 
       <main className="flex flex-col justify-center w-full flex-1 text-center">
         <section>
@@ -19,7 +17,9 @@ export default function Home() {
               <h2 className="font-semibold text-left">Bakfietsen</h2>
 
               <div className="mt-4 text-left flex flex-wrap w-full">
-                <ShoppingCard />
+                {productList.map((product) => (
+                  <ShoppingCard product={product.fields} key={product.sys.id} />
+                ))}
               </div>
             </div>
           </div>
@@ -28,3 +28,17 @@ export default function Home() {
     </div>
   );
 }
+
+const client = require("contentful").createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
+
+export const getStaticProps = async () => {
+  const product = await client.getEntries();
+  return {
+    props: {
+      productList: product.items,
+    },
+  };
+};

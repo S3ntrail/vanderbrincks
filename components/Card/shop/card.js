@@ -1,17 +1,18 @@
-import data from 'data/data.json'
-import ShopButton from 'components/Button/shop/button'
-import Link from 'next/link'
+import ShopButton from "components/Button/shop/button";
+import Link from "next/link";
 
-const ShoppingCard = () => {
-
-  const product = data.map((product) => {
-    return(
-      <Link href={'/shop/' + product.id} key={product.id}>
-      <div  className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+const ShoppingCard = ({ product }) => {
+  return (
+    <Link href={"/shop/" + product.id} key={product.id}>
+      <div className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
         <div className="border-2 border-black rounded-lg p-4 m-2">
-
           <div className="justify-center items-center mx-auto">
-            <img className="rounded-t-lg" src="/cargo-bike.jpg" width="200" height="200"></img>
+            <img
+              className="rounded-t-lg"
+              src="/cargo-bike.jpg"
+              width="200"
+              height="200"
+            ></img>
           </div>
 
           <div className="border-t-2 border-black">
@@ -27,14 +28,10 @@ const ShoppingCard = () => {
           <div className="mt-4">
             <ShopButton />
           </div>
-
         </div>
       </div>
-      </Link>
-    )
-  })
+    </Link>
+  );
+};
 
-  return <>{product}</>
-}
-
-export default ShoppingCard
+export default ShoppingCard;
