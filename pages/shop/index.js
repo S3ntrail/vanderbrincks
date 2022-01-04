@@ -1,6 +1,8 @@
 import Header from "components/Global/Head/head";
 import ShoppingCard from "components/Card/shop/card";
 
+import { createClient } from "contentful";
+
 export default function Home({ productList }) {
   return (
     <div className="flex flex-col items-center justify-center">
@@ -29,13 +31,13 @@ export default function Home({ productList }) {
   );
 }
 
-const client = require("contentful").createClient({
+const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 
 export const getStaticProps = async () => {
-  const product = await client.getEntries();
+  const product = await client.getEntries({ content_type: 'storageBicycle' });
   return {
     props: {
       productList: product.items,

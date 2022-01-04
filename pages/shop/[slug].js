@@ -2,36 +2,51 @@ import Header from "components/Global/Head/head";
 import ShopButton from "components/Button/shop/button";
 import Rating from "components/Rating/Rating";
 
-import data from "data/data.json";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { createClient } from "contentful";
+
+const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
 
 export const getStaticPaths = async () => {
-  const res = data;
+  const res = await client.getEntries({
+    content_type: 'storageBicycle'
+  })
 
-  const paths = res.map((product) => {
+  const paths = res.items.map((item) => {
     return {
-      params: { id: product.id.toString() },
-    };
-  });
+      params: { slug: item.fields.slug }
+    }
+  })
 
   return {
     paths,
-    fallback: false,
-  };
-};
+    fallback: false
+  }
+}
 
-export const getStaticProps = async (context) => {
-  const id = context.params.id;
-  const res = data.find((x) => x.id == id);
+export const getStaticProps = async ({ params }) => {
+  const res = await client.getEntries({
+    content_type: 'storageBicycle',
+    'fields.slug': params.slug
+  })
 
   return {
-    props: { product: res },
-  };
-};
+    props: {
+      bicycle: res.items[0]
+    }
+  }
+}
 
-const Details = ({ product }) => {
+const Details = ({ bicycle }) => {
+
+  const {brand, productName, price, rating, batteryDuration, description} = bicycle.fields
+
   return (
     <div className="flex flex-col items-center justify-center">
-      <Header title={product.brand + " - " + product.name} />
+      <Header title={brand + " - " + productName} />
 
       <main className="flex flex-col justify-center w-full flex-1 text-center">
         <section>
@@ -48,19 +63,19 @@ const Details = ({ product }) => {
             </div>
 
             <div className="w-1/4 text-left animate__animated animate__fadeInRight">
-              <h2 className="font-semibold">{product.name}</h2>
+              <h2 className="font-semibold">{productName}</h2>
 
               <div className="mt-4 text-left flex flex-wrap w-full">
-                <Rating rating={product.rating} />
+                <Rating rating={rating} />
               </div>
 
-              <p className="font-light mt-2">{product.brand}</p>
+              <p className="font-light mt-2">{brand}</p>
               <p className="font-light">
-                {product.durability} uur lang fietsen (op een volle batterij)
+                {batteryDuration} uur lang fietsen (op een volle batterij)
               </p>
 
               <div className="mt-6 text-left flex flex-wrap w-full">
-                <h3>{product.price}</h3>
+                <h3>{price}</h3>
               </div>
 
               <div className="mt-4 text-left flex flex-wrap w-full">
@@ -72,7 +87,7 @@ const Details = ({ product }) => {
 
             <div className="w-full mt-20">
               <h2 className="font-semibold">Omschrijving</h2>
-              <p className="mt-4 m-20 lg:mx-40">{product.description}</p>
+              <div className="mt-4 m-20 lg:mx-40">{documentToReactComponents(description)}</div>
             </div>
 
           </div>

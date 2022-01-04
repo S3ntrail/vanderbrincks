@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ShoppingCard = ({ product }) => {
   return (
-    <Link href={"/shop/" + product.id} key={product.id}>
+    <Link href={"/shop/" + product.slug} key={product.id}>
       <div className="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
         <div className="border-2 border-black rounded-lg p-4 m-2">
           <div className="justify-center items-center mx-auto">
@@ -17,7 +17,7 @@ const ShoppingCard = ({ product }) => {
 
           <div className="border-t-2 border-black">
             <div className="mt-2">
-              <h4>{product.name}</h4>
+              <h4>{product.productName}</h4>
             </div>
           </div>
 
