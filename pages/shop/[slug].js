@@ -1,6 +1,7 @@
 import Header from "components/Global/Head/head";
 import ShopButton from "components/Button/shop/button";
 import Rating from "components/Rating/Rating";
+import Image from "next/image"
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";
@@ -12,37 +13,37 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: 'storageBicycle'
-  })
+    content_type: "storageBicycle",
+  });
 
   const paths = res.items.map((item) => {
     return {
-      params: { slug: item.fields.slug }
-    }
-  })
+      params: { slug: item.fields.slug },
+    };
+  });
 
   return {
     paths,
-    fallback: false
-  }
-}
+    fallback: false,
+  };
+};
 
 export const getStaticProps = async ({ params }) => {
   const res = await client.getEntries({
-    content_type: 'storageBicycle',
-    'fields.slug': params.slug
-  })
+    content_type: "storageBicycle",
+    "fields.slug": params.slug,
+  });
 
   return {
     props: {
-      bicycle: res.items[0]
-    }
-  }
-}
+      bicycle: res.items[0],
+    },
+  };
+};
 
 const Details = ({ bicycle }) => {
-
-  const {brand, productName, price, rating, batteryDuration, description} = bicycle.fields
+  const { brand, productName, price, rating, batteryDuration, description, image } =
+    bicycle.fields;
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -53,12 +54,11 @@ const Details = ({ bicycle }) => {
           <div className="mt-40 flex flex-wrap gap-2 justify-center pb-4">
             <div className="w-1/3 flex flex-row text-left animate__animated animate__fadeInLeft">
               <div className="justify-center items-center mx-auto">
-                <img
-                  className="rounded-t-lg"
-                  src="/cargo-bike.jpg"
-                  width="600"
-                  height="600"
-                ></img>
+                <Image
+                  src={"https:" + image.fields.file.url}
+                  width={image.fields.file.details.image.width}
+                  height={image.fields.file.details.image.height}
+                />
               </div>
             </div>
 
@@ -87,9 +87,10 @@ const Details = ({ bicycle }) => {
 
             <div className="w-full mt-20">
               <h2 className="font-semibold">Omschrijving</h2>
-              <div className="mt-4 m-20 lg:mx-40">{documentToReactComponents(description)}</div>
+              <div className="mt-4 m-20 lg:mx-40">
+                {documentToReactComponents(description)}
+              </div>
             </div>
-
           </div>
         </section>
       </main>
